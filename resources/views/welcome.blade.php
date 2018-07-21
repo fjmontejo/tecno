@@ -50,8 +50,8 @@
 
   <header class="bg-primary text-white">
     <div class="container text-center">
-      <h1>Bienvenido a Tecnovigilancia</h1>
-      <p class="lead"> Sistema de tecnovigilancia Hospital Dr Rafael Pascacio Gamboa </p>
+      <h1>Bienvenidos a Tecnovigilancia</h1>
+      <p class="lead"> Sistema de tecnovigilancia Hospital "Dr Rafael Pascacio Gamboa"</p>
     </div>
   </header>
 
