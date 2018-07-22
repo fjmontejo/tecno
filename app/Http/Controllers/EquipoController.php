@@ -119,7 +119,11 @@ class EquipoController extends Controller
     public function descargarOrden($id)
     {
         $orden = Incidente::find($id);
+<<<<<<< HEAD
         $pdf = PDF::loadView('pdf.orden', compact('orden'));
+=======
+        $pdf = PDF::loadView('pdf.rorden', compact('orden'));
+>>>>>>> 9eb4565852a49d20d53bdd5ff82b36e0f1019b89
         return $pdf->download('orden.pdf');
     }
 }

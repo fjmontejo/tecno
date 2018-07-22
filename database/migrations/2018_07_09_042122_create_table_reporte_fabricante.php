@@ -40,7 +40,11 @@ class CreateTableReporteFabricante extends Migration
             $table->string('iniciales_ope',35)->nullable();
             $table->boolean('tecnico')->default(0)->nullable();
             $table->boolean('enfermera')->default(0)->nullable();
+<<<<<<< HEAD
             $table->boolean('medico',25)->nullable();
+=======
+            $table->booelan('medico',25)->nullable();
+>>>>>>> 9eb4565852a49d20d53bdd5ff82b36e0f1019b89
             $table->boolean('paciente')->default(0)->nullable();
             $table->boolean('familiar')->default(0)->nullable();
             $table->string('otro_ope',25)->nullable();
