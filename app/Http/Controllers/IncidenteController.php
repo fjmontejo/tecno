@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Incidente;
 use App\Equipo;
+use PDF;
+use DB;
+
 
 class IncidenteController extends Controller
 {  
@@ -35,11 +38,28 @@ class IncidenteController extends Controller
     {
     
        $incidente = new Incidente;
-       $incidente->criterio = $request->input('criterio');
+       $incidente->fecha = $request->input('fecha');
+       $incidente->area = $request->input('area');
+       $incidente->reportado_por = $request->input('reportado_por');
+       $incidente->turno = $request->input('turno');
+       $incidente->mp = $request->input('mp');
+       $incidente->mc = $request->input('mc');
+       $incidente->instalacion = $request->input('instalacion');
+       $incidente->asesoria = $request->input('asesoria');
+       $incidente->retiro = $request->input('retiro');
+       $incidente->nombre_equipo = $request->input('nombre_equipo');
+       $incidente->marca = $request->input('marca');
+       $incidente->modelo = $request->input('modelo');
+       $incidente->activo_fijo = $request->input('activo_fijo');
+       $incidente->num_serie = $request->input('num_serie');
+       $incidente->problema_reportado = $request->input('problema_reportado');
+       $incidente->probelma_encontrado = $request->input('probelma_encontrado');
        $incidente->accion = $request->input('accion');
        $incidente->refac_usadas = $request->input('refac_usadas');
        $incidente->observaciones = $request->input('observaciones');
+       $incidente->ingeniero_servicio = $request->input('ingeniero_servicio');
        $incidente->report = $request->input('report');
+       $incidente->aceptacion_de_servicio = $request->input('aceptacion_de_servicio');
        $incidente->equipo_id = $request->input('equipo_id');
        
       
@@ -71,9 +91,22 @@ class IncidenteController extends Controller
        return redirect('/incidentes')->with('message', 'Registro actualizado exitosamente!');
     }
 
-   
+    public function ordenes($id)
+    {
+        $equipo = Equipo::find($id);
 
+        $orden = DB::table('incidentes')->where('equipo_id', '=', $id)->get();
 
+        return view('incidentes.show')
+        ->with('incidente', $equipo)
+        ->with('orden', $orden);
+    }
 
+    public function descargarOrden($id)
+    {
+        $orden = Incidente::find($id);
+        $pdf = PDF::loadView('pdf.rorden', compact('orden'));
+        return $pdf->download('orden.pdf');
+    }
 
 }

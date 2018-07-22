@@ -7,6 +7,7 @@ use App\Equipo;
 use App\Reporpx;
 use App\Reporsalud;
 use App\Reporfabricante;
+use App\Incidente;
 use DB;
 use Carbon\Carbon;
 use PDF;
@@ -88,12 +89,15 @@ class EquipoController extends Controller
         $reporsalud = DB::table('reporte_personalsalud')->where('equipo_id', '=', $id)->get();
         $reporpx = DB::table('reporte_usuarios')->where('equipo_id', '=', $id)->get();
         $reporfabricante = DB::table('reporte_fabricante')->where('equipo_id', '=', $id)->get();
+        $orden = DB::table('incidentes')->where('equipo_id', '=', $id)->get();
 
         return view('equipos.show')
         ->with('equipo', $equipo)
         ->with('reporsalud', $reporsalud) 
         ->with('reporpx', $reporpx)
-        ->with('reporfabricante', $reporfabricante);
+        ->with('reporfabricante', $reporfabricante)
+        ->with('orden', $orden);
+
     }
 
     public function descargarReporteSalud($id)
@@ -109,7 +113,13 @@ class EquipoController extends Controller
         return view('pdf.rpaciente')
         ->with('reporte', $reporte);*/
         $reporte = Reporpx::find($id);
-        $pdf = PDF::loadView('pdf.rpaciente', compact('reporte'))->setPaper('a4', 'landscape')->setWarnings(false);
+        $pdf = PDF::loadView('pdf.rpaciente', compact('reporte'));
         return $pdf->download('reporte.pdf');     
+    }
+    public function descargarOrden($id)
+    {
+        $orden = Incidente::find($id);
+        $pdf = PDF::loadView('pdf.rorden', compact('orden'));
+        return $pdf->download('orden.pdf');
     }
 }

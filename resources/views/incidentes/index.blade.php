@@ -17,28 +17,64 @@
         <table class="table" id="myTable">
             <thead>
                 <tr>
-                    <th>Criterio de reporte</th>
+                    <th>Fecha</th>
+                    <th>área</th>
+                    <th>Personal que reporta</th>
+                    <th>Turno</th>
+                    <th>MP</th>
+                    <th>MC</th>
+                    <th>Instalación</th>
+                    <th>Asesoria</th>
+                    <th>Retiro</th>
+                    <th>Nombre del equipo</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Activo fijo</th>
+                    <th>N°. serie</th>
+                    <th>Problema reportado</th>
+                    <th>Problema encontrado</th>
                     <th>Acción tomada</th>
                     <th>Refacciones utilizadas</th>
                     <th>Observaciones</th>
-                    <th>Reporto</th>
-                    <th>Equipo</th>
+                    <th>Ingeniero de servicio</th>
+                    <th>Jefe de Biomédica</th>
+                    <th>Acceptación de la orden de servicio</th>
+                    <th>Equipo</th> 
                     <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($incidentes as $incidente)
                 <tr>
-                    <td>{{$incidente->criterio}}</td>
+                    <td>{{$incidente->fecha}}</td>
+                    <td>{{$incidente->area}}</td>
+                    <td>{{$incidente->reportado_por}}</td>
+                    <td>{{$incidente->turno}}</td>
+                    <td>{{$incidente->mp}}</td>
+                    <td>{{$incidente->mc}}</td>
+                    <td>{{$incidente->instalacion}}</td>
+                    <td>{{$incidente->asesoria}}</td>
+                    <td>{{$incidente->retiro}}</td>
+                    <td>{{$incidente->nombre_equipo}}</td>
+                    <td>{{$incidente->marca}}</td>
+                    <td>{{$incidente->modelo}}</td>
+                    <td>{{$incidente->activo_fijo}}</td>
+                    <td>{{$incidente->num_serie}}</td>
+                    <td>{{$incidente->problema_reportado}}</td>
+                    <td>{{$incidente->probelma_encontrado}}</td>
                     <td>{{$incidente->accion}}</td>
                     <td>{{$incidente->refac_usadas}}</td>
                     <td>{{$incidente->observaciones}}</td>
+                    <td>{{$incidente->ingeniero_servicio}}</td>
                     <td>{{$incidente->report}}</td>
+                    <td>{{$incidente->aceptacion_de_servicio}}</td>
                     <td>{{$incidente->equipo['nombre']}}</td>
                     <td>  
                     <div>
                     <a href="{{url('/incidentes/editar')}}/{{$incidente->id}}" class="btn btn-sm btn-primary">Editar</a>
-                    </div>
+                    
+                </div>
+                    
                     </td>
                 </tr>
                 @endforeach

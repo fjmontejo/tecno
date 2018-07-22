@@ -1,6 +1,6 @@
 @extends('layouts.app') @section('content')
 <div class="container">
-    <h3>Registrar incidente por personal de la salud
+    <h3>Registrar incidente por fabricante
         <span class=" badge badge-info">{{$equipo->nombre}}</span>
     </h3>
     <hr>
@@ -14,7 +14,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de notificación inicial</label>
-                <input type="text" name="num_noti" class="form-control" placeholder="Introduce número de ingreso ">
+                <input type="text" name="num_noti" class="form-control" placeholder="Introduce número de notificación inicial ">
             </div>
             <div class="form-group col-md-12">
                 <hr>
@@ -47,11 +47,11 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de registro sanitario del equipo</label>
-                <input type="text" name="num_sanita" class="form-control" placeholder="Introduce lugar de notificación">
+                <input type="text" name="num_sanita" class="form-control" placeholder="Introduce número de registro">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Fecha aviso al titular del registro</label>
-                <input type="date" name="fecha_avisotitu" class="form-control" placeholder="Introduce fecha de notificación">
+                <input type="date" name="fecha_avisotitu" class="form-control" placeholder="Introduce fecha de aviso">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Fecha de la notificación</label>
@@ -89,19 +89,19 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Nombre o razón social de la empresa</label>
-                <input type="text" name="nombre_razoempre" class="form-control" placeholder="Introduce otra opción">
+                <input type="text" name="nombre_razoempre" class="form-control" placeholder="Introduce nombre o razón social">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">RFC</label>
-                <input type="text" name="rfc" class="form-control" placeholder="Introduce iniciales del notificador">
+                <input type="text" name="rfc" class="form-control" placeholder="Introduce RFC">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">iniciales de la persona que realiza la notificación</label>
-                <input type="email" name="iniciales_noti" class="form-control" placeholder="Introduce correo electronico del notificador">
+                <input type="text" name="iniciales_noti" class="form-control" placeholder="Introduce iniciales">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Nombre de la persona que dará seguimiento a la notificación</label>
-                <input type="text" name="nombre_seguimiento" class="form-control" placeholder="Introduce área de adscripcion y/o servicio de quien presenta la notificación">
+                <input type="text" name="nombre_seguimiento" class="form-control" placeholder="Introduce nombre">
             </div>
             <div class="form-group col-md-12">
                 <span class="badge badge-primary">
@@ -110,7 +110,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Iniciales</label>
-                <input type="text" name="iniciales_ope" class="form-control" placeholder="Introduce área de adscripcion y/o servicio de quien presenta la notificación">
+                <input type="text" name="iniciales_ope" class="form-control" placeholder="Introduce iniciales del operador">
             </div>
             <div class="form-group col-md-4 form-check">
                 <input class="form-group " type="checkbox" value="1" name="tecnico">
@@ -360,11 +360,11 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Otro:</label>
-                <input type="text" name="otro_evento" class="form-control" placeholder="Introduce otra EVENTO">
+                <input type="text" name="otro_evento" class="form-control" placeholder="Introduce otro">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">USO DIFERENTE:</label>
-                <input type="text" name="uso_diferente" class="form-control" placeholder="Introduce otra EVENTO">
+                <input type="text" name="uso_diferente" class="form-control" placeholder="Describe">
             </div>
             <div class="form-group col-md-4 form-check">
                 <label>
@@ -451,11 +451,11 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Denomonación genérica</label>
-                <input type="text" name="denominaciongene" class="form-control" placeholder="Introduce marca o denominación">
+                <input type="text" name="denominaciongene" class="form-control" placeholder="Introduce denominación genérica">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">MODELO, PRESENTACIÓN, CÓDIGO O NÚMERO DE CATÁLOGO</label>
-                <input type="text" name="modelo_presentacion" class="form-control" placeholder="Introduce marca o denominación">
+                <input type="text" name="modelo_presentacion" class="form-control" placeholder="Introduce modelo">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">NÚMERO DE SERIE O LOTE</label>
@@ -463,11 +463,11 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Versión de software, si aplica</label>
-                <input type="text" name="version_software" class="form-control" placeholder="Introduce NOMBRE DE FABRICANTE, DISTRIBUIDOR O COMERCIALIZADOR">
+                <input type="text" name="version_software" class="form-control" placeholder="Introduce version de software si aplica">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Descripción del dispositivo </label>
-                <input type="text" name="descri_dispo" class="form-control" placeholder="Introduce NÚMERO DE REGISTRO SANITARIO ">
+                <input type="text" name="descri_dispo" class="form-control" placeholder="Describe">
             </div>
             <div class="form-group col-md-4 form-check">
                 <label>
