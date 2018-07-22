@@ -10,7 +10,7 @@
           <img src="sec.png" alt="Smiley face" width="300" height=150 style="float:right">
         </div>
     
-    <center><h1>SECRETAR&IacuteA DE SALUD </h1>
+    <center><h1>SECRETARÍA DE SALUD  </h1>
     <h2> HOSPITAL REGIONAL</h2>
     <h2>" DR RAFAEL PASCACIO GAMBOA"</h2>
   </center>
@@ -23,11 +23,12 @@
    <HR>
 <BR>
    <right><p> 
-     FECHA   <input type="text" size="35" maxlength="80"  name="FECHA">
+     FECHA   <input type= "text" size="35" maxlength="80"  name="">
      <BR>
+      
       <BR><BR>
 
-     &AacuteREA   <input type="text" size="35" maxlength="80"  name="AREA">
+     ÁREA   <input type="text" size="35" maxlength="80"  name="AREA">
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      PERSONAL QUE REPORTA   <input type="text" size="35" maxlength="80"  name="PERSONAL">
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,7 +51,7 @@
            MC <input type="checkbox" name="MC" size="50">
       </td>
       <td>
-          INSTALACI&OacuteN <input type="checkbox" name="INSTALACION" size="50">
+          INSTALACIÓN <input type="checkbox" name="INSTALACION" size="50">
       </td>
       <td>
           ASESORIA <input type="checkbox" name="ASESORIA" size="50">
@@ -96,9 +97,9 @@
   <BR><BR>
     <HR>
 <BR>
-  PROBLEMA REPORTADO / RAZ&OacuteN DEL SERVICIO
+  PROBLEMA REPORTADO / RAZÓN DEL SERVICIO
   <textarea name="PREPORTADO" rows="6" cols="185"></textarea>    
-  PROBLEMA ENCONTRADO / CONDICI&OacuteN ENCONTRADA
+  PROBLEMA ENCONTRADO / CONDICIÓN ENCONTRADA
   <textarea name="PREPORTADO" rows="6" cols="185"></textarea>    
   ACCIONES TOMADAS
   <textarea name="PREPORTADO" rows="6" cols="185"></textarea>    
@@ -131,7 +132,7 @@ OBSERVACIONES
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;
-  ACEPTACI&OacuteN DE LA ORRDEN DE SERVICIO </p>
+  ACEPTACIÓN DE LA ORRDEN DE SERVICIO </p>
 
   </body>
 </html>

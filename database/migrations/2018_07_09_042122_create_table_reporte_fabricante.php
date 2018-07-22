@@ -32,23 +32,23 @@ class CreateTableReporteFabricante extends Migration
             $table->boolean('fabricante_noti')->default(0)->nullable();
             $table->boolean('distri_noti')->default(0)->nullable();
             $table->boolean('comer_noti')->default(0)->nullable();
-            $table->string('nombre_razoempre',25)->nullable();
-            $table->string('rfc',20)->nullable();
-            $table->string('iniciales_noti',20)->nullable();
-            $table->string('nombre_seguimiento',20)->nullable();
+            $table->string('nombre_razoempre',50)->nullable();
+            $table->string('rfc',40)->nullable();
+            $table->string('iniciales_noti',45)->nullable();
+            $table->string('nombre_seguimiento',60)->nullable();
             //Datos del operador del dispositivo durante el incidente
-            $table->string('iniciales_ope',20)->nullable();
+            $table->string('iniciales_ope',35)->nullable();
             $table->boolean('tecnico')->default(0)->nullable();
             $table->boolean('enfermera')->default(0)->nullable();
-            $table->string('medico',10)->nullable();
+            $table->boolean('medico',25)->nullable();
             $table->boolean('paciente')->default(0)->nullable();
             $table->boolean('familiar')->default(0)->nullable();
             $table->string('otro_ope',25)->nullable();
             //identificacion del px
-            $table->string('iniciales_px',10)->nullable();
-            $table->string('edad_px',10)->nullable(); 
-            $table->string('peso_px',10)->nullable(); 
-            $table->string('estatura_px',10)->nullable(); 
+            $table->string('iniciales_px',25)->nullable();
+            $table->string('edad_px',25)->nullable(); 
+            $table->string('peso_px',25)->nullable(); 
+            $table->string('estatura_px',25)->nullable(); 
             $table->enum('genero', ['femenino', 'masculino']);
             
             //info del incidente
@@ -58,9 +58,9 @@ class CreateTableReporteFabricante extends Migration
             $table->boolean('incidente_adverso')->default(0)->nullable();
             $table->boolean('inci_previsto')->default(0)->nullable();
             $table->boolean('inci_imprevisto')->default(0)->nullable();
-            $table->string('lugar_estado',10)->nullable();
-            $table->string('lugar_muni',10)->nullable();
-            $table->string('lugar_locali',10)->nullable();
+            $table->string('lugar_estado',40)->nullable();
+            $table->string('lugar_muni',40)->nullable();
+            $table->string('lugar_locali',40)->nullable();
             $table->boolean('casa')->default(0)->nullable();
             $table->boolean('trabajo')->default(0)->nullable();
             $table->boolean('via_publica')->default(0)->nullable();
@@ -68,11 +68,11 @@ class CreateTableReporteFabricante extends Migration
             $table->text('otro_incidente',50)->nullable();
             $table->boolean('servicio')->default(0)->nullable();
             $table->string('nombre_institucion',20)->nullable();
-            $table->string('domicilio',35)->nullable();
+            $table->string('domicilio',50)->nullable();
              //reporto a otro autoridad
             $table->boolean('autoridad')->default(0)->nullable();
-            $table->string('quien',35)->nullable();
-            $table->string('num_repor',20)->nullable();
+            $table->string('quien',50)->nullable();
+            $table->string('num_repor',50)->nullable();
              //consecuencia del incidente
              $table->boolean('no_prendio')->default(0)->nullable();
              $table->boolean('toques')->default(0)->nullable();
@@ -87,12 +87,12 @@ class CreateTableReporteFabricante extends Migration
              $table->boolean('mal_funcionamiento')->default(0)->nullable();
              $table->boolean('desconexion')->default(0)->nullable();
              $table->boolean('info_confusa')->default(0)->nullable();
-             $table->string('otro_evento',35)->nullable();
-             $table->string('uso_diferente',35)->nullable();
+             $table->string('otro_evento',60)->nullable();
+             $table->string('uso_diferente',65)->nullable();
              $table->boolean('luz_inadecua')->default(0)->nullable();
              $table->boolean('desconocimientofun')->default(0)->nullable();
              $table->boolean('interaccion_sustancias')->default(0)->nullable();
-             $table->text('descripcion_incidente',50)->nullable();
+             $table->text('descripcion_incidente',100)->nullable();
              //consequencia del incidente
              $table->boolean('muerte')->default(0)->nullable();
              $table->boolean('intervencion_med')->default(0)->nullable();
@@ -102,15 +102,15 @@ class CreateTableReporteFabricante extends Migration
              $table->boolean('deficiencia_permanente')->default(0)->nullable();
              $table->boolean('daño_permanente')->default(0)->nullable();
              $table->boolean('hospitalizacion')->default(0)->nullable();
-             $table->string('otro_consequen',35)->nullable();
-             $table->string('conse_inci_descripcion',35)->nullable();
+             $table->string('otro_consequen',60)->nullable();
+             $table->string('conse_inci_descripcion',50)->nullable();
              //devuelto a
-             $table->string('marcaodenom',25)->nullable();
-             $table->string('denominaciongene',25)->nullable();
-             $table->string('modelo_presentacion',25)->nullable(); 
-             $table->string('numero_lote',25)->nullable();
-             $table->string('version_software',25)->nullable();
-             $table->string('descri_dispo',25)->nullable();
+             $table->string('marcaodenom',50)->nullable();
+             $table->string('denominaciongene',50)->nullable();
+             $table->string('modelo_presentacion',50)->nullable(); 
+             $table->string('numero_lote',50)->nullable();
+             $table->string('version_software',50)->nullable();
+             $table->string('descri_dispo',50)->nullable();
             //tipo de dispositivo medico
              $table->boolean('equipo_medico')->default(0)->nullable();
              $table->boolean('protesis')->default(0)->nullable();
@@ -118,7 +118,7 @@ class CreateTableReporteFabricante extends Migration
              $table->boolean('insumo_odonto')->nullable();
              $table->boolean('mate_quiru')->nullable();
              $table->boolean('produc_higienicos')->nullable();
-             $table->string('otro_tipo',35)->nullable();
+             $table->string('otro_tipo',60)->nullable();
              $table->enum('clasificacion',['clase1', 'clase2', 'clase3']);
              //uso del dispositivo
              $table->boolean('tratamiento')->default(0)->nullable();
@@ -141,17 +141,17 @@ class CreateTableReporteFabricante extends Migration
              $table->boolean('distribuidor')->default(0)->nullable();
              $table->string('otro_devuelto',50)->nullable();
              //seguimiento y cierre
-             $table->text('acciones_preven',50)->nullable();
-             $table->text('acciones_correc',50)->nullable();
-             $table->text('acciones_seguricampo',50)->nullable();
-             $table->text('valor_limite',50)->nullable();
+             $table->text('acciones_preven',100)->nullable();
+             $table->text('acciones_correc',100)->nullable();
+             $table->text('acciones_seguricampo',100)->nullable();
+             $table->text('valor_limite',100)->nullable();
              // en caso de reporte de seguimiento
-             $table->text('avances_investigacion',50)->nullable();
-             $table->text('resultados_preliminares',50)->nullable();
+             $table->text('avances_investigacion',100)->nullable();
+             $table->text('resultados_preliminares',100)->nullable();
              //en caso de reporte final
-             $table->text('causa_raiz',50)->nullable();
-             $table->text('resultados_conclusiones',50)->nullable();
-             $table->text('info_interes',50)->nullable();
+             $table->text('causa_raiz')->nullable();
+             $table->text('resultados_conclusiones')->nullable();
+             $table->text('info_interes')->nullable();
              $table->boolean('publico')->default(0)->nullable();
             
              $table->unsignedInteger('equipo_id');

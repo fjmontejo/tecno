@@ -52,6 +52,8 @@ Route::get('/descargar/reportesalud/{id}', 'EquipoController@descargarReporteSal
 Route::get('/descargar/reportespaciente/{id}', 'EquipoController@descargarReportePaciente');
 
 
+Route::get('/descargar/ordenservicio/{id}', 'EquipoController@descargarOrden');
+
 
 
 Route::get('/incidentes','IncidenteController@index');
@@ -63,6 +65,9 @@ Route::post('/incidentes/guardar', 'IncidenteController@store');
 Route::get('/incidentes/editar/{id}', 'IncidenteController@edit');
 
 Route::put('/incidentes/actualizar/{id}', 'IncidenteController@update');
+
+
+
 
 
 Route::get('/reportespx','ReporpxController@index');
