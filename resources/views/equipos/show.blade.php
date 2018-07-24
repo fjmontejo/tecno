@@ -105,7 +105,7 @@
                     <td>{{$reporfabricante->repor_fin}}</td>
                     <td>{{$reporfabricante->notini_repfin}}</td>
                     <td>
-                        <a href="" class="btn btn-success">
+                        <a href="{{url('/descargar/reportesfabricante')}}/{{$reporfabricante->id}}" class="btn btn-success">
                             <i class="fa fa-file-pdf"></i> Descargar</a>
                     </td>
                 </tr>

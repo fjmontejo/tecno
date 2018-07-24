@@ -51,6 +51,7 @@ Route::get('/descargar/reportesalud/{id}', 'EquipoController@descargarReporteSal
 
 Route::get('/descargar/reportespaciente/{id}', 'EquipoController@descargarReportePaciente');
 
+Route::get('/descargar/reportesfabricante/{id}', 'EquipoController@descargarReporteFabricante');
 
 Route::get('/descargar/ordenservicio/{id}', 'EquipoController@descargarOrden');
 

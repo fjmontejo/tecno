@@ -113,17 +113,19 @@ class EquipoController extends Controller
         return view('pdf.rpaciente')
         ->with('reporte', $reporte);*/
         $reporte = Reporpx::find($id);
-        $pdf = PDF::loadView('pdf.rpaciente', compact('reporte'));
+        $pdf = PDF::loadView('pdf. ', compact('reporte'));
         return $pdf->download('reporte.pdf');     
+    }
+    public function descargarReporteFabricante($id)
+    {
+        $reporte = Reporfabricante::find($id);
+        $pdf = PDF::loadView('pdf.fabricante', compact('reporte'));
+        return $pdf->download('fabricante.pdf');
     }
     public function descargarOrden($id)
     {
         $orden = Incidente::find($id);
-<<<<<<< HEAD
         $pdf = PDF::loadView('pdf.orden', compact('orden'));
-=======
-        $pdf = PDF::loadView('pdf.rorden', compact('orden'));
->>>>>>> 9eb4565852a49d20d53bdd5ff82b36e0f1019b89
         return $pdf->download('orden.pdf');
     }
 }
