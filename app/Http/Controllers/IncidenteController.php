@@ -36,7 +36,12 @@ class IncidenteController extends Controller
 
     public function store(Request $request)
     {
-    
+        $validatedData = $request->validate([
+            'activo_fijo' => 'required|max:255',
+            'num_serie' => 'required',
+            'marca' => 'required',
+        ]);
+       
        $incidente = new Incidente;
        $incidente->fecha = $request->input('fecha');
        $incidente->area = $request->input('area');

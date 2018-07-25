@@ -15,8 +15,8 @@ class CreateTablePersonas extends Migration
     {
             Schema::create('personas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre',50);
-            $table->string('apellidos',50);
+            $table->string('nombre',60);
+            $table->string('apellidos',60);
             $table->integer('edad');
             
             $table->unsignedInteger('user_id');

@@ -1,229 +1,223 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+﻿<!DOCTYPE html>
 <html lang="es-ES">
   <head>
     <meta charset="utf-8">
     <title>ORDEN DE SERVICIO</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-        td {
-            padding: 6px 5px;
-            font-size: 15px;
-        }
-
-        .tabla1 {
-            border: 1.3px solid black;
-        }
-    </style>
     <link rel="stylesheet" type="text/css" href="orden.css" >
   </head>
   
   <body>
-      <div>
-          <img src="escudo.jpg" alt="Smiley face" width="200" height=150 style="float:left">
-          <img src="sec.png" alt="Smiley face" width="300" height=150 style="float:right">
-        </div>
-    
-    <center><h1>SECRETARÍA DE SALUD </h1>
-    <h2> HOSPITAL REGIONAL</h2>
-    <h2>" DR RAFAEL PASCACIO GAMBOA"</h2>
-  </center>
-<hr>
-<hr>
+        <table width="100%" border="1" cellspacing="8" cellpadding="4">
+            <tr>
+                <td bgcolor=gray>
+                    <br>
 
-<center><p> 
-  
-    <font size="5" color="#2F4F4F"> ORDEN DE SERVICIO </font>
-   </p></center>
-   <HR>
-<BR>
-
-   <right><p> 
-     FECHA = <span border-width= "10px 1px"style="order-image: initial; border: 1px solid black;" size ="35">{{$orden->fecha}}</span>
-      
-    
-     <BR>
-      <BR><BR>
-
-     ÁREA :  <span style="order-image: initial; border: 1px solid black;">{{$orden->area}}</span>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     PERSONAL QUE REPORTA   <span style="order-image: initial; border: 1px solid black;">{{$orden->reportado_por}}</span>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     TURNO   <span style="order-image: initial; border: 1px solid black;">{{$orden->turno}}</span>
-   </p>
-   <BR>
-   <CENTER><h3>TIPO DE SERVICIO</h3></CENTER>
-   <HR>
-   <BR>
-<table width="100%" border="1" cellspacing="5" cellpadding="10">
-  <tr>
-      
-      <td  >
+                </td>
+            </tr>
+            </table>
+        <table width="100%" border="1" cellspacing="8" cellpadding="4">
+            <tr>
+                <td>
+                    <div>
+                            <img src="escudo.jpg" width="200" height="100"/>
+                        
+                                   
+                              
+                                    
+                            <img src="sec.png" width="200" height=100 style="float:right"/>
+                    </div>
+                    <center>
+                            <font style="font-family: times, serif; font-size:14pt; font-style:italic" size="4">
+                                    SECRETARIA DE SALUD<BR>
+                                        HOSPITAL REGIONAL<BR>
+                                            "DR RAFAEL PASCACIO GAMBOA"<br><br>
+                                    DEPARTAMENTO DE INGENIERÌA BIOMÈDICA
         
-          MP  <span style="order-image: initial; border: 1px solid black;">{{true-false}}</span>
-          
-              
-      </td>
-      
-  
-      <td>
-           MC  <span style="order-image: initial; border: 1px solid black;">{{true-false}}</span>
-      </td>
-      <td>
-          INSTALACIÓN <span style="order-image: initial; border: 1px solid black;">{{true-false}}</span>
-      </td>
-      <td>
-          ASESORIA <span style="order-image: initial; border: 1px solid black;">{{true-false}}</span>
-      </td>
-      <td>
-          RETIRO <span style="order-image: initial; border: 1px solid black;">{{true-false}}</span>
-      </td>
-          
-    </tr> 
-  
-  
-</table>
-<CENTER><h3>DATOS DEL EQUIPO</h3></CENTER>
-<HR>
+                                </font>
+                    </center>
+                   
+                    
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#00BFFF">
+                 <center>
+                     ORDEN DE SERVICIO
+                  </center>
+                </td>
+            </tr>
+            <TR>
+                <TD bgcolor="#CCCCCC">
+                    <center>
+                        DATOS DE QUIEN REPORTA Y GENERALES DEL AREA
+                    </center>
+
+                </TD>
+            </TR>
+            </table>
+            <table  width="100%" border="1" cellspacing="8" cellpadding="4">
+                <tr>
+                    <td>
+                        <CENTER>
+                            AREA <hr><br>
+                            <!--aqui pones la respuesta-->
+                            {{$orden->area}}
+
+                        </CENTER>
+                    </td>
+                    <TD>
+                        <CENTER>
+                            PERSONAL QUE REPORTA<hr><br>
+                            <!--aqui pones la respuesta-->
+                            {{$orden->reportado_por}}
+                        </CENTER>
+                    </TD>
+                    <td>
+                        <center>
+                            TURNO<hr><br>
+                            <!--aqui pones la respuesta-->
+                            {{$orden->turno}}
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            FECHA<hr><br>
+                            <!--aqui pones la respuesta-->
+                           {{$orden->fecha}}
+
+                        </center>
+                    </td>
+                </tr>
+
+            </table>
+        <table width="100%" border="1" cellspacing="8" cellpadding="4">
+            <tr>
+                <td bgcolor="#CCCCCC">
+                    <center>
+                        TIPO DE SERVICIO
+                    </center>
+                </td>
+            </tr>
+            <TR>
+                <TD>
+                    <CENTER><BR>
+                         <!--DENTRO DE LOS CORCHETES PONES LO REFERENTE HA-->
+                            MP  [@if($orden->mp) X @else - @endif] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                            MC [@if($orden->mc) X @else - @endif]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+                            ASESORIA [@if($orden->asesoria) X @else - @endif]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                            INSTALACIÒN [@if($orden->instalacion) X @else - @endif]&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                             RETIRO[@if($orden->retiro) X @else - @endif]
+
 <BR>
-  <div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      EQUIPO   <span style="order-image: initial; border: 1px solid black;">hola</span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      MARCA  <span style="order-image: initial; border: 1px solid black;">hola</span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      MODELO   <span style="order-image: initial; border: 1px solid black;">hola</span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <BR><BR><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       
-       ACTIVO FIJO  <span style="order-image: initial; border: 1px solid black;">hola</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       Nº SERIE  <span style="order-image: initial; border: 1px solid black;">hola</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-  
-  </div>
-        
-  <BR><BR>
-    <HR>
-<BR>
+                    </CENTER>
+                    
+                </TD>
+            </TR>
+            <tr>
+                    <td bgcolor="#CCCCCC">
+                        <center>
+                            DATOS DEL EQUIPO MEDICO
+                        </center>
+                    </td>
+                </tr>
+           
+        </table>
+    <table width="100%" border="1" cellspacing="8" cellpadding="4">
+            
+        <tr>
+            <td>
+                EQUIPO<HR>
+                    {{$orden->nombre_equipo}}
+            </td>
+            <td>
+                    MARCA<HR>
+                        {{$orden->marca}}
+         </td>
+         <td>
+                MODELO<HR>
+                    {{$orden->modelo}}
+        </td>
+        <td>
+                NUM SERIE<HR>
+                    {{$orden->num_serie}}
+            </td>
+            <td>
+                    ACTIVO FIJO<HR>
+                        {{$orden->activo_fijo}}
+                </td>
+        </tr>
 
-  PROBLEMA REPORTADO / RAZÓN DEL SERVICIO
-  <br><br>
-<table width="100%"  align="center" border="0" cellspacing="10" cellpadding="10">
-<tr>
-<td>
-<fieldset width="100%" height = "350" >
-hola
-</fieldset>
-</td>
-</tr>
-</table>
+    </table>
+    <table width="100%" border="1" cellspacing="8" cellpadding="4">
+            <tr>
+                    <td bgcolor="#CCCCCC">
+                        <center>
+                            PROBLEMA REPORTADO Y ACCIONES TOMADAS
+                        </center>
+                    </td>
+                </tr>
+                  <tr>
+            <td>
+                PROBLEMA REPORTADO /RAZON DE SERVICIO<HR><BR>
+                    <!--RESPUESTA-->
+                    {{$orden->problema_reportado}}
+           <BR> <BR><BR></td>
+        </tr>
+        <tr>
+                <td>
+                    PROBLEMA ENCONTRADO<HR><BR>
+                        <!--RESPUESTA-->
+                        {{$orden->probelma_encontrado}}
+               <BR> <BR><BR></td>
+            </tr>
+            <tr>
+                    <td>
+                       ACCIONES TOMADAS<HR><BR>
+                            <!--RESPUESTA-->
+                            {{$orden->accion}}
+                   <BR> <BR><BR></td>
+                </tr>
+                <tr>
+                        <td>
+                            REFACCIONES UTILIZADAS<HR><BR>
+                                <!--RESPUESTA-->
+                                {{$orden->refac_usadas}}
+                       <BR> <BR><BR></td>
+                    </tr>
+                    <tr>
+                            <td>
+                                OBSERVACIONES<HR><BR>
+                                    <!--RESPUESTA-->
+                                    {{$orden->observaciones}}
+                           <BR> <BR><BR></td>
+                       <BR> </tr>
+                        <tr>
+                                <td bgcolor="#00BFFF">
+                                 <center>
+                                    <BR>
+                                  </center>
+                                </td>
+                            </tr>
+        <TR>
+            <TD>
+                <BR><br>
+                    <hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                  <b>INGENIERO QUE REALIZO EL SERVICIO  {{$orden->ingeniero_servicio}}</b> 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+                   <b>JEFE DE DEPARTAMENTO DE BIOMEDICA  {{$orden->report}}</b> 
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                   <b>ACEPTACION DE LA ORDEN DE SERVICIO  {{$orden->aceptacion_de_servicio}}</b> 
+        </TD>
+        </TR>
+    <tr>
+        <td bgcolor=gray>
+            <br>
 
-  PROBLEMA ENCONTRADO / CONDICIÓN ENCONTRADA
-  <table width="100%"  align="center" border="0" cellspacing="10" cellpadding="10">
-<tr>
-<td>
-<fieldset width="100%" height = "350" >
-hola
-</fieldset>
-</td>
-</tr>
-</table>
-  ACCIONES TOMADAS
-  <table width="100%"  align="center" border="0" cellspacing="10" cellpadding="10">
-<tr>
-<td>
-<fieldset width="100%" height = "350" >
-hola
-</fieldset>
-</td>
-</tr>
-</table>   
-REFACCIONES UTILIZADAS  
-<table width="100%"  align="center" border="0" cellspacing="10" cellpadding="10">
-<tr>
-<td>
-<fieldset width="100">
-hola
-</fieldset>
-</td>
-</tr>
-</table>
-OBSERVACIONES 
-<table width="100%"  align="center" border="0" cellspacing="10" cellpadding="10">
-<tr>
-<td>
-<fieldset width="100">
-hola
-</fieldset>
-</td>
-</tr>
-</table>
-
-
-<br><br><br>
-<BR>
-  <br><BR><BR>
-    <hr>
-    
-    <p> <span style="order-image: initial; border: 1px solid black;">hola</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-        <span style="order-image: initial; border: 1px solid black;">hola</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span style="order-image: initial; border: 1px solid black;">hola</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
-    
-<p>INGENIERO DE SERVICIO(NOMBRE Y FIRMA) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  JEFE DE BIOMEDICA(NOMBRE Y FIRMA)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;
-  ACEPTACIÓN DE LA ORRDEN DE SERVICIO </p>
-
-  </body>
+        </td>
+    </tr>
+    </table>
+               
 </html>

@@ -29,7 +29,7 @@
                 <label for="exampleInputEmail1">Tipo de Usuario</label>
                <select name="type_user" class="form-control">
                 <option value="administrador">Administrador</option>
-                <option value="estancia">Estancias/Estadías</option>
+                <option value="ing_servicio">Ingeniero de servicio</option>
                 <option value="inventario">Jefe de Inventario</option>
                </select>
             </div>   

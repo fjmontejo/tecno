@@ -103,8 +103,8 @@ class EquipoController extends Controller
     public function descargarReporteSalud($id)
     {
         $reporte = Reporsalud::find($id);
-        return view('pdf.rsalud')
-        ->with('reporte', $reporte);
+        $pdf= PDF::loadView('pdf.rmedico', compact('reporte'));
+        return $pdf->download('personal_salud.pdf');
     }
     
     public function descargarReportePaciente($id)
@@ -113,14 +113,14 @@ class EquipoController extends Controller
         return view('pdf.rpaciente')
         ->with('reporte', $reporte);*/
         $reporte = Reporpx::find($id);
-        $pdf = PDF::loadView('pdf. ', compact('reporte'));
-        return $pdf->download('reporte.pdf');     
+        $pdf = PDF::loadView('pdf.rpaciente', compact('reporte'));
+        return $pdf->download('reporte_pacientes.pdf');     
     }
     public function descargarReporteFabricante($id)
     {
         $reporte = Reporfabricante::find($id);
-        $pdf = PDF::loadView('pdf.fabricante', compact('reporte'));
-        return $pdf->download('fabricante.pdf');
+        $pdf = PDF::loadView('pdf.rtitular', compact('reporte'));
+        return $pdf->download('reporte_titular.pdf');
     }
     public function descargarOrden($id)
     {

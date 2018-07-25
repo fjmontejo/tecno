@@ -3,7 +3,15 @@
     <h3>ORDEN DE SERVICIO
         <span class="badge badge-info">{{$equipo->nombre}}</span>
     </h3>
-    <hr>
+    <hr> @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <form method="POST" action="{{ url('/incidentes/guardar') }}">
         @csrf
         <div class="row col-md-12">
@@ -57,8 +65,8 @@
                 <input type="text" name="modelo" class="form-control" placeholder="Introduce modelo del equipo">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Activo fijo</label>
-                <input type="text" name="activo_fijo" class="form-control" placeholder="Introduce Activo fijo">
+                <label for="exampleInputEmail1">Activo fijo (*)</label>
+                <input type="text" name="activo_fijo" class="form-control" placeholder="Introduce Activo fijo" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de serie</label>

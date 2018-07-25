@@ -22,37 +22,37 @@ class CreateTableReporteUsuarios extends Migration
             $table->string('lugar_muni')->nullable();
             $table->string('lugar_locali')->nullable();
             $table->date('fecha')->nullable();
-            $table->string('iniciales_notificador',10)->nullable();
-            $table->string('email',20)->nullable();
+            $table->string('iniciales_notificador',30)->nullable();
+            $table->string('email',50)->nullable();
             $table->boolean('presento_incidente_si')->default(0)->nullable();
             $table->boolean('presento_incidente_no')->default(0)->nullable();
-            $table->string('parentezco', 25)->nullable();
+            $table->string('parentezco', 30)->nullable();
             //identificacion del px
-            $table->string('iniciales_px',10)->nullable();
-            $table->string('edad_px',10)->nullable(); 
-            $table->string('peso_px',10)->nullable(); 
-            $table->string('estatura_px',10)->nullable(); 
+            $table->string('iniciales_px',30)->nullable();
+            $table->string('edad_px',30)->nullable(); 
+            $table->string('peso_px',30)->nullable(); 
+            $table->string('estatura_px',30)->nullable(); 
             $table->enum('genero', ['femenino', 'masculino']);
             //info del incidente
             $table->date('fecha_incidente')->nullable(); 
-            $table->string('lugar_estado',30)->nullable();
-            $table->string('lugar_municipio',30)->nullable();
-            $table->string('lugar_localidad',30)->nullable();
+            $table->string('lugar_estado',50)->nullable();
+            $table->string('lugar_municipio',50)->nullable();
+            $table->string('lugar_localidad',50)->nullable();
             $table->boolean('casa')->default(0)->nullable();
             $table->boolean('trabajo')->default(0)->nullable();
             $table->boolean('via_publica')->default(0)->nullable();
             $table->boolean('ambulancia')->default(0)->nullable();
-            $table->text('otro_incidente',50)->nullable();
+            $table->text('otro_incidente')->nullable();
             $table->boolean('servicio_pub')->default(0)->nullable();
             $table->boolean('servicio_priv')->default(0)->nullable();
-            $table->string('nombre_institucion',20)->nullable();
-            $table->string('domicilio',35)->nullable();
+            $table->string('nombre_institucion')->nullable();
+            $table->string('domicilio',50)->nullable();
              //reporto a otro autoridad
             $table->boolean('autoridad_si')->default(0)->nullable();
             $table->boolean('autoridad_no')->default(0)->nullable();
-            $table->string('quien',35)->nullable();
-            $table->string('reporte',10)->nullable();
-            $table->text('descripcion',40)->nullable();
+            $table->string('quien',50)->nullable();
+            $table->string('reporte',30)->nullable();
+            $table->text('descripcion',30)->nullable();
              
              //consecuencia del incidente
              $table->boolean('muerte')->default(0)->nullable();
@@ -65,9 +65,9 @@ class CreateTableReporteUsuarios extends Migration
              $table->boolean('hospitalizacion')->default(0)->nullable();
              // $table->boolean('intervencion')->default(0)->nullable();
              $table->string('otro_consequen',50)->nullable();
-             $table->string('nombre_dispo',25)->nullable();
-             $table->string('modelo_dispo',25)->nullable();
-             $table->string('num_dispo',25)->nullable();
+             $table->string('nombre_dispo',40)->nullable();
+             $table->string('modelo_dispo',40)->nullable();
+             $table->string('num_dispo',40)->nullable();
              //ubicacion situacion del dispositivo
              $table->boolean('desconocido')->default(0)->nullable();
              $table->boolean('destruido')->default(0)->nullable();

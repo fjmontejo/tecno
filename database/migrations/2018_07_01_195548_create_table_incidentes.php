@@ -17,19 +17,19 @@ class CreateTableIncidentes extends Migration
 
             $table->increments('id');
             $table->date('fecha');
-            $table->string('area',25);
-            $table->string('reportado_por', 25);
-            $table->string('turno',25)->nullable();;
+            $table->string('area',40);
+            $table->string('reportado_por', 40);
+            $table->string('turno',30)->nullable();;
             $table->boolean('mp')->default(0)->nullable();
             $table->boolean('mc')->default(0)->nullable();
             $table->boolean('instalacion')->default(0)->nullable();
             $table->boolean('asesoria')->default(0)->nullable();
             $table->boolean('retiro')->default(0)->nullable();
-            $table->string('nombre_equipo',40);
-            $table->string('marca',30);
-            $table->string('modelo',30);
-            $table->string('activo_fijo',40);
-            $table->string('num_serie',40);
+            $table->string('nombre_equipo',50);
+            $table->string('marca',50);
+            $table->string('modelo',50);
+            $table->string('activo_fijo',50);
+            $table->string('num_serie',50);
             $table->text('problema_reportado');
             $table->text('probelma_encontrado');
             $table->text('accion');
