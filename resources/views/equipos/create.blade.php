@@ -10,8 +10,8 @@
                 <input type="text" name="nombre" class="form-control" placeholder="Introduce nombre de equipo">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1"># Serie</label>
-                <input type="text" name="num_serie" class="form-control" placeholder="Introduce numero de serie">
+                <label for="exampleInputEmail1"># Serie (*)</label>
+                <input type="text" name="num_serie" class="form-control" placeholder="Introduce numero de serie" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Marca</label>
@@ -27,15 +27,15 @@
             </div> 
             
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Estatus</label>
-                <select name="status" class="form-control">
+                <label for="exampleInputEmail1">Estatus (*)</label>
+                <select name="status" class="form-control" required>
                     <option value="1">ACTIVO</option>
                     <option value="0">INACTIVO</option>
                 </select>
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1"># fijo</label>
-                <input type="text" name="fijo" class="form-control" placeholder="Introduce número fijo">
+                <label for="exampleInputEmail1"># fijo (*)</label>
+                <input type="text" name="fijo" class="form-control" placeholder="Introduce número fijo" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Equipo clase:</label>

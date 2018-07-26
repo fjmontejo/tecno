@@ -26,7 +26,6 @@
                     <th>Notificación inicial y reporte final</th>
                     <th>Número de reporte interno de la empresa</th>
                     <th>Número de registro sanitario del dispositivo</th>
-                    <th>Número de reporte interno de la empresa</th>
                     <th>Fecha de notificación al titular del registro sanitario</th>
                     <th>Fecha de notificación</th>
                     <th>Titular del registro sanitario</th>
@@ -147,28 +146,28 @@
                 <tr>
                     <td>{{$reporfabricante->num_ingresocof}}</td>
                     <td>{{$reporfabricante->num_noti}}</td>
-                    <td>{{$reporfabricante->noti_ini}}</td>
-                    <td>{{$reporfabricante->repor_segui}}</td>
-                    <td>{{$reporfabricante->repor_fin}}</td>
-                    <td>{{$reporfabricante->notini_repfin}}</td>
+                    <td>@if($reporfabricante->noti_ini) X @else - @endif</td>
+                    <td>@if($reporfabricante->repor_segui) X @else - @endif</td>
+                    <td>@if($reporfabricante->repor_fin)X @else - @endif</td>
+                    <td>@if($reporfabricante->notini_repfin) X @else -@endif</td>
                     <td>{{$reporfabricante->num_reporemp }}</td>
                     <td>{{$reporfabricante->num_sanita }}</td>
                     <td>{{$reporfabricante->fecha_avisotitu}}</td>
                     <td>{{$reporfabricante->fecha_noti}}</td>
-                    <td>{{$reporfabricante->titu_sanita}}</td>
-                    <td>{{$reporfabricante->fabricante_noti}}</td>
-                    <td>{{$reporfabricante->distri_noti}}</td>
-                    <td>{{$reporfabricante->comer_noti}}</td>
+                    <td>@if($reporfabricante->titu_sanita) X @else - @endif</td>
+                    <td>@if($reporfabricante->fabricante_noti) X @else - @endif</td>
+                    <td>@if($reporfabricante->distri_noti) X @else - @endif</td>
+                    <td>@if($reporfabricante->comer_noti) X @else - @endif</td>
                     <td>{{$reporfabricante->nombre_razoempre}}</td>
                     <td>{{$reporfabricante->rfc}}</td>
                     <td>{{$reporfabricante->iniciales_noti}}</td>
                     <td>{{$reporfabricante->nombre_seguimiento}}</td>
                     <td>{{$reporfabricante->iniciales_ope}}</td>
-                    <td>{{$reporfabricante->tecnico}}</td>
-                    <td>{{$reporfabricante->enfermera}}</td>
-                    <td>{{$reporfabricante->medico}}</td>
-                    <td>{{$reporfabricante->paciente}}</td>
-                    <td>{{$reporfabricante->familiar}}</td>
+                    <td>@if($reporfabricante->tecnico) X @else - @endif</td>
+                    <td>@if($reporfabricante->enfermera) X @else - @endif</td>
+                    <td>@if($reporfabricante->medico) X @else - @endif</td>
+                    <td>@if($reporfabricante->paciente) X @else - @endif</td>
+                    <td>@if($reporfabricante->familiar) X @else - @endif</td>
                     <td>{{$reporfabricante->otro_ope}}</td>
                     <td>{{$reporfabricante->iniciales_px}}</td>
                     <td>{{$reporfabricante->edad_px}}</td>
@@ -176,18 +175,18 @@
                     <td>{{$reporfabricante->estatura_px}}</td>
                     <td>{{$reporfabricante->genero}}</td>
                     <td>{{$reporfabricante->fecha_incidente}}</td>
-                    <td>{{$reporfabricante->evento}}</td>
-                    <td>{{$reporfabricante->incidente}}</td>
-                    <td>{{$reporfabricante->incidente_adverso}}</td>
-                    <td>{{$reporfabricante->inci_previsto}}</td>
-                    <td>{{$reporfabricante->inci_imprevisto}}</td>
+                    <td>@if($reporfabricante->evento) X @else - @endif</td>
+                    <td>@if($reporfabricante->incidente) X @else - @endif</td>
+                    <td>@if($reporfabricante->incidente_adverso) X @else - @endif</td>
+                    <td>@if($reporfabricante->inci_previsto) X @else - @endif</td>
+                    <td>@if($reporfabricante->inci_imprevisto) X @else - @endif</td>
                     <td>{{$reporfabricante->lugar_estado}}
                     <td>{{$reporfabricante->lugar_muni}}</td>
                     <td>{{$reporfabricante->lugar_locali}}</td>
-                    <td>{{$reporfabricante->casa}}</td>
-                    <td>{{$reporfabricante->trabajo}}
-                    <td>{{$reporfabricante->via_publica}}</td>
-                    <td>{{$reporfabricante->ambulancia}}</td>
+                    <td>@if($reporfabricante->casa) X @else - @endif</td>
+                    <td>@if($reporfabricante->trabajo) X @else - @endif</td>
+                    <td>@if($reporfabricante->via_publica) X @else - @endif</td>
+                    <td>@if($reporfabricante->ambulancia) X @else - @endif</td>
                     <td>{{$reporfabricante->otro_incidente}}</td>
                     <td>{{$reporfabricante->servicio_pub}}</td>
                     <td>{{$reporfabricante->servicio_priv}}</td>
@@ -197,7 +196,7 @@
                     <td>{{$reporfabricante->autoridad_no}}</td>
                     <td>{{$reporfabricante->quien}}</td>
                     <td>{{$reporfabricante->num_repor}}</td>
-                    <td>{{$reporfabricante->no_prendio}}</td>
+                    <td>@if($reporfabricante->no_prendio) X @else - @endif</td>
                     <td>{{$reporfabricante->toques}}</td>
                     <td>{{$reporfabricante->quemo}}</td>
                     <td>{{$reporfabricante->rompio}}</td>

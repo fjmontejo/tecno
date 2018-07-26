@@ -32,15 +32,15 @@
             <thead>
                 <tr>
                     <td style="width:20%; align:left;">
-                        {{--
-                        <img src="{{asset('images/salud_1.png')}}" style="width:70%;"> --}}
+                        
+                        <img src="{{asset('img/logo_salud.PNG')}}" style="width:70%;"> 
                     </td>
                     <td style="width:60%;">
                         <h2 style="text-align:center; font-size:10px;">Comisión Federal para la Protección contra Riesgos Sanitarios</h2>
                     </td>
                     <td style="width:20%; align:rigth;">
-                        {{--
-                        <img src="{{asset('images/cofepris_1.png')}}" style="width:70%;"> --}}
+                        
+                        <img src="{{asset('img/logo_cofepris.PNG')}}" style="width:70%;"> 
                     </td>
                 </tr>
             </thead>

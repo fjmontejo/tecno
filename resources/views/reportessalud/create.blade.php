@@ -16,7 +16,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de ingreso(USO EXCLUSIVO DE LA COFEPRIS)</label>
-                <input type="text" name="num_ingresocof" class="form-control" placeholder="Introduce número de ingreso ">
+                <input type="text" name="num_ingresocof" class="form-control" placeholder="Introduce número de ingreso "required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de reporte</label>
@@ -76,7 +76,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">E-mail</label>
-                <input type="email" name="email" class="form-control" placeholder="Introduce correo electronico del notificador">
+                <input type="email" name="email" class="form-control" placeholder="Introduce correo electronico del notificador"required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Área de adscripción</label>
@@ -266,7 +266,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de reporte:</label>
-                <input type="text" name="reporte" class="form-control" placeholder="Introduce descripcion delincidente">
+                <input type="text" name="reporte" class="form-control" placeholder="Introduce descripcion delincidente" required>
             </div>
             <div class="form-group col-md-12">
                 <hr>

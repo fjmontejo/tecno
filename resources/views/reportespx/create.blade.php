@@ -20,7 +20,7 @@
             </div>
             <div class="form-group col-md-4">
                     <label for="exampleInputEmail1">Número de reporte de la cofepris</label>
-                    <input type="text" name="num_cofe" class="form-control" placeholder="Introduce número de notificación cofepris ">
+                    <input type="text" name="num_cofe" class="form-control" placeholder="Introduce número de notificación cofepris " required>
                 </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de reporte</label>
@@ -56,7 +56,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">E-mail</label>
-                <input type="email" name="email" class="form-control" placeholder="Introduce correo electronico del notificador">
+                <input type="email" name="email" class="form-control" placeholder="Introduce correo electronico del notificador" required>
             </div>
             <div class="form-group col-md-12">
                 <span class="badge badge-primary">
@@ -287,7 +287,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de serie o lote:</label>
-                <input type="text" name="num_dispo" class="form-control" placeholder="Introduce otra consequencia">
+                <input type="text" name="num_dispo" class="form-control" placeholder="Introduce otra consequencia" required>
             </div>
             <div class="form-group col-md-4 form-check">
                 <label>

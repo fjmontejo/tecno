@@ -18,16 +18,16 @@
                 <input type="text" name="edad" class="form-control" placeholder="Introduce edad">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Correo Electrónico</label>
-                <input type="email" name="email" class="form-control" placeholder="Introduce correo">
+                <label for="exampleInputEmail1">Correo Electrónico (*)</label>
+                <input type="email" name="email" class="form-control" placeholder="Introduce correo" required>
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Contraseña de Acceso</label>
-                <input type="password" name="password" class="form-control" placeholder="Introduce contraseña">
+                <label for="exampleInputEmail1">Contraseña de Acceso (*)</label>
+                <input type="password" name="password" class="form-control" placeholder="Introduce contraseña" required>
             </div> 
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Tipo de Usuario</label>
-               <select name="type_user" class="form-control">
+                <label for="exampleInputEmail1">Tipo de Usuario (*)</label>
+               <select name="type_user" class="form-control" required>
                 <option value="administrador">Administrador</option>
                 <option value="ing_servicio">Ingeniero de servicio</option>
                 <option value="inventario">Jefe de Inventario</option>

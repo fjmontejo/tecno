@@ -47,6 +47,9 @@
                     </li>
                     @if(Auth::user()->type_user == 'administrador')
                     <li>
+                        <a class="nav-link js-scroll-trigger" href="{{ url('/calendario') }}">Calendario de actividades Anual</a>
+                    </li>
+                    <li>
                         <a class="nav-link js-scroll-trigger" href="{{ url('/incidentes') }}">Reportes de Mantenimientos</a>
                     </li>
                     <li>

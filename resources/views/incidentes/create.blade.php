@@ -16,12 +16,12 @@
         @csrf
         <div class="row col-md-12">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Fecha</label>
+                <label for="exampleInputEmail1">Fecha(*)</label>
                 <input type="date" name="fecha" class="form-control" placeholder="Introduce fecha ">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Área</label>
-                <input type="text" name="area" class="form-control" placeholder="Introduce área ">
+                <input type="text" name="area" class="form-control" placeholder="Introduce área "required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Personal que reporta</label>
@@ -57,8 +57,8 @@
                 <input type="text" name="nombre_equipo" class="form-control" placeholder="Introduce nombre del equipo">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Marca</label>
-                <input type="text" name="marca" class="form-control" placeholder="Introduce marca del equipo">
+                <label for="exampleInputEmail1">Marca (*)</label>
+                <input type="text" name="marca" class="form-control" placeholder="Introduce marca del equipo" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Modelo</label>
@@ -69,8 +69,8 @@
                 <input type="text" name="activo_fijo" class="form-control" placeholder="Introduce Activo fijo" required>
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Número de serie</label>
-                <input type="text" name="num_serie" class="form-control" placeholder="Introduce criterio de reporte ">
+                <label for="exampleInputEmail1">Número de serie (*)</label>
+                <input type="text" name="num_serie" class="form-control" placeholder="Introduce criterio de reporte " required>
             </div>
             <hr>
             <div class="form-group col-md-4">
@@ -82,7 +82,7 @@
                 <input type="text" name="probelma_encontrado" class="form-control" placeholder="Introduce probelma encontrado">
             </div>
             <div class="form-group col-md-12">
-                <label for="exampleInputEmail1">Accion tomada</label>
+                <label for="exampleInputEmail1">Acción tomada</label>
                 <textarea class="form-control" name="accion" rows="4" cols="50" placeholder="Describe..."></textarea>
             </div>
             <div class="form-group col-md-12">
@@ -100,12 +100,12 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Jefe de Biomédica</label>
-                <input type="text" name="report" value="{{Auth::user()->name}}" class="form-control" placeholder="Quien reportó?" readonly>
+                <input type="text" name="report" value="{{Auth::user()->name}}" class="form-control" placeholder="Quien reportó?" required>
                 <input type="hidden" name="equipo_id" value="{{$equipo->id}}">
             </div>
             <div class="form-group col-md-12">
                 <label for="exampleInputEmail1">Aceptación de la orden de servicio</label>
-                <textarea class="form-control" name="aceptacion_de_servicio" rows="4" cols="50" placeholder="Describe..."></textarea>
+                <textarea class="form-control" name="aceptacion_de_servicio" rows="4" cols="50" placeholder="Firma de acuerdo"></textarea>
             </div>
         </div>
         <div class="row col-md-4">

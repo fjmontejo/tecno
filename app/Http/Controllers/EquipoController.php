@@ -34,7 +34,12 @@ class EquipoController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {  
+        $validatedData = $request->validate([
+            'num_serie' => 'required|max:255',
+            'status' => 'required',
+            'fijo' => 'required',
+        ]); 
        $equipo = new Equipo;
        $equipo->nombre = $request->input('nombre');
        $equipo->num_serie = $request->input('num_serie');
@@ -82,6 +87,13 @@ class EquipoController extends Controller
         return redirect('/equipos')->with('message', 'Equipo eliminado exitosamente!');
     }
 
+
+    public function calendario(){
+
+        return view('calendario.calendario');
+
+
+    }    
     public function incidentes($id)
     {
         $equipo = Equipo::find($id);

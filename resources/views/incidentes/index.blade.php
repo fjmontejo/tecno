@@ -50,11 +50,11 @@
                     <td>{{$incidente->area}}</td>
                     <td>{{$incidente->reportado_por}}</td>
                     <td>{{$incidente->turno}}</td>
-                    <td>{{$incidente->mp}}</td>
-                    <td>{{$incidente->mc}}</td>
-                    <td>{{$incidente->instalacion}}</td>
-                    <td>{{$incidente->asesoria}}</td>
-                    <td>{{$incidente->retiro}}</td>
+                    <td>@if($incidente->mp) X @else - @endif</td>
+                    <td>@if($incidente->mc) X @else - @endif</td>
+                    <td>@if($incidente->instalacion) X @else - @endif</td>
+                    <td>@if($incidente->asesoria) X @else - @endif</td>
+                    <td>@if($incidente->retiro) X @else - @endif</td>
                     <td>{{$incidente->nombre_equipo}}</td>
                     <td>{{$incidente->marca}}</td>
                     <td>{{$incidente->modelo}}</td>

@@ -28,6 +28,12 @@ class ReporfabricanteController extends Controller
     public function store(Request $request)
     {
        //$reppx = $request->all();
+       $validatedData = $request->validate([
+        'num_ingresocof' => 'required|max:255',
+        'rfc ' => 'required',
+        'domicilio' => 'required',
+        'quien'=> 'required',
+    ]);
        $reporfabricante = new Reporfabricante;
        $reporfabricante->num_ingresocof = $request->input('num_ingresocof');
        $reporfabricante->num_noti = $request->input('num_noti');

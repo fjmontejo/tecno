@@ -40,6 +40,7 @@ class IncidenteController extends Controller
             'activo_fijo' => 'required|max:255',
             'num_serie' => 'required',
             'marca' => 'required',
+            'area' => 'required'
         ]);
        
        $incidente = new Incidente;

@@ -25,7 +25,14 @@ class ReporsaludController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {   
+
+
+        $validatedData = $request->validate([
+            'num_ingresocof' => 'required|max:255',
+            'email' => 'required',
+            'reporte' => 'required',
+        ]);
        //$reppx = $request->all();
        $reporsalud = new Reporsalud;
        $reporsalud->num_ingresocof = $request->input('num_ingresocof');

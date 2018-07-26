@@ -26,7 +26,13 @@ class ReporpxController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {   
+
+        $validatedData = $request->validate([
+            'num_cofe' => 'required|max:255',
+            'email' => 'required',
+            'num_dispo' => 'required',
+        ]);
        //$reppx = $request->all();
        $reppx = new Reporpx;
        $reppx->num_cofe = $request->input('num_cofe');

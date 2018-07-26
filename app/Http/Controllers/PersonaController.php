@@ -31,7 +31,11 @@ class PersonaController extends Controller
 
     public function store(Request $request)
     {
-    
+        $validatedData = $request->validate([
+            'email' => 'required|max:255',
+            'password' => 'required',
+            'type_user' => 'required',
+        ]); 
        $persona = new Persona;
        $persona->nombre = $request->input('nombre');
        $persona->apellidos = $request->input('apellidos');

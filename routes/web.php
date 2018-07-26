@@ -55,6 +55,8 @@ Route::get('/descargar/reportesfabricante/{id}', 'EquipoController@descargarRepo
 
 Route::get('/descargar/ordenservicio/{id}', 'EquipoController@descargarOrden');
 
+Route::get('/calendario', 'EquipoController@calendario'); 
+
 
 
 Route::get('/incidentes','IncidenteController@index');
@@ -92,29 +94,7 @@ Route::get('/reportesfabricante/crear/{id}', 'ReporfabricanteController@create')
 
 Route::post('/reportesfabricante/guardar', 'ReporfabricanteController@store');
  
-Route::get('/pdf', function(){
-    $pdf = PDF::loadView('pdf.reporte');
-    $pdf->setPaper('A4','letter');
-    return $pdf->download('REPORT-INCIDENTES.pdf');
-});
 
-Route::get('/test', function(){
-    return view('pdf.incidentes_usuario');
-});
-
-
-Route::get('/test2', function(){
-    return view('pdf.reporte');
-});
-
-Route::get('/test3', function(){
-    return view('pdf.rpaciente');
-});
-
-
-Route::get('/test4', function(){
-    return view('pdf.rsalud');
-});
 
 
 

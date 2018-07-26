@@ -52,7 +52,7 @@
                         <a href="{{url('/equipos/editar')}}/{{$equipo->id}}" class="btn btn-sm btn-primary">Editar</a>
                         <a href="{{url('/equipos/eliminar')}}/{{$equipo->id}}" class="btn btn-sm btn-danger">Eliminar</a>
                         @endif
-                        @if(Auth::user()->type_user == 'estancia' || 'administrador')
+                        @if(Auth::user()->type_user == 'ing_servicio' || 'administrador')
                         <a href="{{url('/incidentes/crear')}}/{{$equipo->id}}" class="btn btn-sm btn-warning">Reportar</a>
                         <a href="{{url('/reportespx/crear')}}/{{$equipo->id}}" class="btn btn-sm btn-success">Reporte PX</a>
                         <a href="{{url('/reportessalud/crear')}}/{{$equipo->id}}" class="btn btn-sm btn-danger">Reporte Personalsalud</a>

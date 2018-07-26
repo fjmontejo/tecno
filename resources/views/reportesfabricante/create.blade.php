@@ -10,7 +10,7 @@
 
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de ingreso(USO EXCLUSIVO DE LA COFEPRIS)</label>
-                <input type="text" name="num_ingresocof" class="form-control" placeholder="Introduce número de ingreso ">
+                <input type="text" name="num_ingresocof" class="form-control" placeholder="Introduce número de ingreso " required
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de notificación inicial</label>
@@ -93,7 +93,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">RFC</label>
-                <input type="text" name="rfc" class="form-control" placeholder="Introduce RFC">
+                <input type="text" name="rfc" class="form-control" placeholder="Introduce RFC" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">iniciales de la persona que realiza la notificación</label>
@@ -257,7 +257,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Domicilio</label>
-                <input type="text" name="domicilio" class="form-control" placeholder="Domicilio">
+                <input type="text" name="domicilio" class="form-control" placeholder="Domicilio" required>
             </div>
             <div class="form-group col-md-12">
                 <hr>
@@ -357,7 +357,7 @@
                 <label>
                     <input type="checkbox" name="info_confusa" value="1">INFORMACIÓN DEL ETIQUETADO Ó EMPAQUE INCOMPLETA O CONFUSA</label>
                 <br>
-            </div>
+            </div> 
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Otro:</label>
                 <input type="text" name="otro_evento" class="form-control" placeholder="Introduce otro">
