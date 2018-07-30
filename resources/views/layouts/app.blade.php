@@ -16,8 +16,10 @@
 
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
 
+    
 </head>
 
 <body id="page-top">
@@ -41,7 +43,7 @@
                         <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">Registro</a>
                     </li>-->
                     @else
-                    
+
                     <li>
                         <a class="nav-link js-scroll-trigger" href="{{ url('/equipos') }}">Equipos</a>
                     </li>
@@ -113,6 +115,9 @@
     <script src="{{asset('template/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
+    <!--Date Picker-->
+
+
     <!-- Plugin JavaScript -->
     <script src="{{asset('template/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
@@ -122,41 +127,48 @@
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
     <script>
-        $(document).ready( function () {
+        $(document).ready(function () {
             $('#myTable').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-                    }
+                }
             });
         });
     </script>
     <script>
-        $(document).ready( function () {
+        $(document).ready(function () {
             $('#myTable1').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-                    }
+                }
             });
         });
     </script>
     <script>
-        $(document).ready( function () {
+        $(document).ready(function () {
             $('#myTable2').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-                    }
+                }
             });
         });
     </script>
     <script>
-        $(document).ready( function () {
+        $(document).ready(function () {
             $('#myTable3').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-                    }
+                }
             });
         });
     </script>
+
+    <script type="text/javascript">
+        $('.date').datepicker({
+            format: 'mm-dd-yyyy'
+        });
+    </script>
+
 
 </body>
 

@@ -206,7 +206,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Descripción del incidente:</label>
-                <input type="text" name="descripcion" class="form-control" placeholder="Introduce descripcion delincidente">
+                <input type="text" name="descripcion" class="form-control" placeholder="Introduce descripcion del incidente">
             </div>
             <div class="form-group col-md-12">
                 <hr>
@@ -283,11 +283,11 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Modelo:</label>
-                <input type="text" name="modelo_dispo" class="form-control" placeholder="Introduce otra consequencia">
+                <input type="text" name="modelo_dispo" class="form-control" placeholder="Introduce modelo">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Número de serie o lote:</label>
-                <input type="text" name="num_dispo" class="form-control" placeholder="Introduce otra consequencia" required>
+                <input type="text" name="num_dispo" class="form-control" placeholder="Introduce número de serie o lote" required>
             </div>
             <div class="form-group col-md-4 form-check">
                 <label>

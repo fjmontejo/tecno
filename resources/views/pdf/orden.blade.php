@@ -19,12 +19,12 @@
             <tr>
                 <td>
                     <div>
-                            <img src="escudo.jpg" width="200" height="100"/>
+                            <img src="./img/escudo.jpg" width="200" height="100"/>
                         
                                    
                               
                                     
-                            <img src="sec.png" width="200" height=100 style="float:right"/>
+                            <img src="./img/salud.png" width="200" height=100 style="float:right"/>
                     </div>
                     <center>
                             <font style="font-family: times, serif; font-size:14pt; font-style:italic" size="4">
