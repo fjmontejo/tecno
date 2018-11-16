@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -63,21 +62,12 @@
                     <td style="border: 1px solid black; font-size:5px; text-align:center; font-weight: bold;">
                         No. DE NOTIFICACION INICIAL
                     </td>
-                    <td style="border: 1px solid black; font-size:5px; text-align:center; font-weight: bold;">
-                        CÓDIGO DE VERIFICACIÓN DE LA INFORMACIÓN
-                    </td>    
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td style="border: 1px solid black; font-size:7px;">{{$reporte->num_cofe}} </td>
                     <td style="border: 1px solid black; font-size:7px;">{{$reporte->num_noti}}</td>
-                    <td style="border: 1px solid black; font-size:7px;">
-                        @php
-                            $var = 'http://prueba1.test/qr-pacientes/'.$reporte->id;
-                        @endphp
-                        <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(100)->generate($var)) !!} ">
-                    </td>
                 </tr>
             </tbody>
         </table>

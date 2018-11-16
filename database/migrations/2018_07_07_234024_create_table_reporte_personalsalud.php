@@ -25,7 +25,7 @@ class CreateTableReportePersonalsalud extends Migration
             $table->boolean('centro_inst')->default(0)->nullable();
             $table->boolean('hospital')->default(0)->nullable();
             $table->boolean('consultorio')->default(0)->nullable();
-            $table->boolean('laboratorio')->nullable();
+            $table->boolean('laboratorio'3)->nullable();
             $table->string('otro_lug',50)->nullable();
             $table->string('iniciales_noti',10)->nullable();
             $table->string('email',50)->nullable();

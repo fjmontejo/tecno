@@ -115,4 +115,9 @@ class IncidenteController extends Controller
         return $pdf->download('orden.pdf');
     }
 
+    //public function verificacion(){
+        
+    //    return view('qr.verificacion');
+    //} 
+
 }

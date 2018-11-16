@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es-ES">
   <head>
     <meta charset="utf-8">
@@ -213,15 +213,12 @@
         </TD>
         </TR>
     <tr>
-        <td bgcolor=white>
-            <h4> Código de verificación de la información</h3>
+        <td bgcolor=gray>
             <br>
-            @php
-            $var = 'http://prueba1.test/qr-servicios/'.$orden->id;
-            @endphp
-        <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(100)->generate($var)) !!} ">
+
         </td>
     </tr>
     </table>
+   
                
 </html>

@@ -59,6 +59,9 @@ Route::get('/calendario', 'EquipoController@calendario');
 
 
 
+
+
+
 Route::get('/incidentes','IncidenteController@index');
 
 Route::get('/incidentes/crear/{id}', 'IncidenteController@create');
@@ -94,7 +97,38 @@ Route::get('/reportesfabricante/crear/{id}', 'ReporfabricanteController@create')
 
 Route::post('/reportesfabricante/guardar', 'ReporfabricanteController@store');
  
+Route::get('/qr-code', function () 
+{
+    return view('qr');      
+}); 
 
+Route::get('qr-personal/{id}', function($id){
+    $reporte = App\Reporpx::find($id);
+
+    return view('qr.verificacion4')
+        ->with('reporte', $reporte);
+});
+
+Route::get('qr-fabricante/{id}', function($id){
+    $reporte = App\Reporpx::find($id);
+
+    return view('qr.verificacion3')
+        ->with('reporte', $reporte);
+});
+
+Route::get('qr-pacientes/{id}', function($id){
+    $reporte = App\Reporpx::find($id);
+
+    return view('qr.verificacion2')
+        ->with('reporte', $reporte);
+});
+
+Route::get('qr-servicios/{id}', function($id){
+    $orden = App\Incidente::find($id);
+
+    return view('qr.verificacion')
+        ->with('orden', $orden);
+});
 
 
 

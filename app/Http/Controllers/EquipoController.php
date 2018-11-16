@@ -93,7 +93,8 @@ class EquipoController extends Controller
         return view('calendario.calendario');
 
 
-    }    
+    }  
+     
     public function incidentes($id)
     {
         $equipo = Equipo::find($id);
@@ -140,4 +141,5 @@ class EquipoController extends Controller
         $pdf = PDF::loadView('pdf.orden', compact('orden'));
         return $pdf->download('orden.pdf');
     }
+    
 }
