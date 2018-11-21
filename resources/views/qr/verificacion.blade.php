@@ -40,20 +40,25 @@
           </h5>
           </p>
         </div>
+  <div class="form-group col-md-6">      
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Datos a validar</h2>
           <ul class="list-group">
-          <li class="list-group-item ">Nombre del equipo:{{$orden->nombre_equipo}}</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item ">Nombre del equipo: {{$orden->nombre_equipo}}</li>
+          <li class="list-group-item">Marca: {{$orden->marca}}</li>
+          <li class="list-group-item">Modelo: {{$orden->modelo}}</li>
+          <li class="list-group-item">Número de serie: {{$orden->num_serie}}</li>
+          <li class="list-group-item">Activo fijo: {{$orden->activo_fijo}}</li>
+          <li class="list-group-item">Personal que reporta: {{$orden->reportado_por}}</li>
+          <li class="list-group-item">Fecha y hora de reporte: {{$orden->created_at}}</li>
+         
           </ul>
         </div>
       </div>
     </div>
+  </div>
   </section>
   
   <!-- Footer -->

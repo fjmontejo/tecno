@@ -40,22 +40,27 @@
           </h5>
           </p>
         </div>
-    <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Fecha de notificación</th>
-            <th scope="col">e-mail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>{{$reporte->fecha}}</td>
-            <td>{{$reporte->email}}</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="form-group col-md-12">      
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2>Datos a validar</h2>
+                <ul class="list-group">
+                <li class="list-group-item ">Número de ingreso COFEPRIS: {{$reporte->num_ingresocof}}</li>
+                <li class="list-group-item">Número de notificación: {{$reporte->num_noti}}</li>
+                <li class="list-group-item">Número de reporte de la empresa: {{$reporte->num_reporemp}}</li>
+                <li class="list-group-item">Fecha de aviso  al titular: {{$reporte->fecha_avisotitu}}</li>
+                <li class="list-group-item">Nombre o razón social empresa: {{$reporte->nombre_razoempre}}</li>
+                <li class="list-group-item">RFC: {{$reporte->rfc}}</li>
+                <li class="list-group-item">Nombre de quien da seguimiento: {{$reporte->nombre_seguimiento}}</li>
+                <li class="list-group-item">Iniciales del operador: {{$reporte->iniciales_ope}}</li>
+                <li class="list-group-item">Iniciales del paciente: {{$reporte->iniciales_px}}</li>
+               
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
   </section>
 </div>
 <br>

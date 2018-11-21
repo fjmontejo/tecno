@@ -35,27 +35,32 @@
       <div class="container">
           <p>
           <h5>  
-           *En esta sección se encuentran los datos relevantes al formato de ordenes de servicios 
+           *En esta sección se encuentran los datos relevantes al formato de incidentes adversos por el paciente
            para ser validados.
           </h5>
           </p>
         </div>
-    <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Fecha de notificación</th>
-            <th scope="col">e-mail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>{{$reporte->fecha}}</td>
-            <td>{{$reporte->email}}</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="form-group col-md-12">      
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2>Datos a validar</h2>
+                <ul class="list-group">
+                <li class="list-group-item ">Número de notificación COFEPRIS: {{$reporte->num_cofe}}</li>
+                <li class="list-group-item">Número de notificación: {{$reporte->num_noti}}</li>
+                <li class="list-group-item">Lugar de notificación (Estado): {{$reporte->lugar_esta}}</li>
+                <li class="list-group-item">Lugar de notificación (Municipio): {{$reporte->lugar_muni}}</li>
+                <li class="list-group-item">Lugar de notificación (Localidad): {{$reporte->lugar_locali}}</li>
+                <li class="list-group-item">Fecha: {{$reporte->fecha}}</li>
+                <li class="list-group-item">E-mail: {{$reporte->email}}</li>
+                <li class="list-group-item">Iniciales del Paciente: {{$reporte->iniciales_px}}</li>
+                <li class="list-group-item">Fecha del incidente: {{$reporte->fecha_incidente}}</li>
+               
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
   </section>
 </div>
 <br>
