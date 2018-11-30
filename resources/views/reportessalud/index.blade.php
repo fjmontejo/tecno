@@ -12,7 +12,7 @@
 
     <h2>Reportes incidente adverso por personal de salud</h2>
     <p>
-        <a href="{{url('/reportessalud/crear')}}" class="btn btn-outline-primary">Agregar Nuevo</a>
+       <!-- <a href="{{url('/reportessalud/crear')}}" class="btn btn-outline-primary">Agregar Nuevo</a>-->
     </p>
     <div class "table-responsive">
         <table class="table" id="myTable">

@@ -12,7 +12,7 @@
 
     <h2>Reportes incidente adverso por fabricante</h2>
     <p>
-        <a href="{{url('/reportesfabricante/crear')}}" class="btn btn-outline-primary">Agregar Nuevo</a>
+       <!-- <a href="{{url('/reportesfabricante/crear')}}" class="btn btn-outline-primary">Agregar Nuevo</a>-->
     </p>
     <div class "table-responsive">
         <table class="table" id="myTable">

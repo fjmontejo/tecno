@@ -66,6 +66,9 @@
                     <li>
                         <a class="nav-link js-scroll-trigger" href="{{ url('/personas') }}">Personal</a>
                     </li>
+                    <li>
+                        <a class="nav-link js-scroll-trigger" href="{{ url('/glosario') }}">Glosario</a>
+                    </li>
                     @endif
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link js-scroll-trigger dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"

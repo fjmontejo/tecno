@@ -12,7 +12,7 @@
 
     <h2>Reportes incidente adverso por paciente/usuario</h2>
     <p>
-        <a href="{{url('/reportespx/crear')}}" class="btn btn-outline-primary">Agregar Nuevo</a>
+       <!-- <a href="{{url('/reportespx/crear')}}" class="btn btn-outline-primary">Agregar Nuevo</a>-->
     </p>
     <div class "table-responsive">
         <table class="table" id="myTable3">

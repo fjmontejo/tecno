@@ -74,6 +74,7 @@
                     <a href="{{url('/incidentes/editar')}}/{{$incidente->id}}" class="btn btn-sm btn-primary">Editar</a>
                     
                 </div>
+               
                     
                     </td>
                 </tr>
@@ -81,5 +82,93 @@
             </tbody>
         </table>
     </div>
+    <br>
+    <br>
+    <br>
+    <div>
+            <div class="form-group col-md-12"> 
+                <a href="#" class="badge badge-warning"><h1>Matriz de riesgo/Alertas</h2></a>
+            </div>
+             <br>
+             <br>
+             <br>
+                <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col"></th>
+                            <th scope="col">Probabilidad</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Fatal</td>
+                            <td>1x cada semana</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mayor</td>
+                            <td>1x cada mes</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Ocasional</td>
+                            <td>1x cada semestre</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Remoto</td>
+                            <td>1x cada año</td>
+                          </tr>    
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mayor</td>
+                            <td>1x cada 5 años</td>
+                          </tr>
+                        </tbody>
+                      </table>
+             <br>
+             <br>
+             <br>
+             <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"></th>
+                        <th scope="col">Impacto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Fatal</td>
+                        <td>Todo el hospital</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Mayor</td>
+                        <td>Área biomédica</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Ocasional</td>
+                        <td>Piso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Remoto</td>
+                        <td>Profesional de la salud</td>
+                      </tr>    
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mayor</td>
+                        <td>Toda la secretaria</td>
+                      </tr>
+                    </tbody>
+                  </table>         
+
+    </div>
+
 </div>
 @endsection

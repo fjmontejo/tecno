@@ -9,7 +9,7 @@
     </div>
     @endif
     <h2>
-        ORDENESD DE SERVICIO
+        ORDENES DE SERVICIO
     </h2>
     <hr>
     <h4>Ordenes de servicio</h4>
@@ -34,7 +34,7 @@
                     <td>{{$orden->reportado_por}}</td>
                     <td>{{$orden->turno}}</td>
                     <td>
-                        @if($orden->mp) X @else - @endifx
+                        @if($orden->mp) X @else - @endif
                     </td>
                     <td> @if($orden->mc) X @else - @endif
                     </td>

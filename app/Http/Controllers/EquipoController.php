@@ -94,6 +94,13 @@ class EquipoController extends Controller
 
 
     }  
+
+    public function glosario(){
+
+        return view('glosario.index');
+
+
+    } 
      
     public function incidentes($id)
     {

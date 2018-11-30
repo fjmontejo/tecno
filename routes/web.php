@@ -57,6 +57,8 @@ Route::get('/descargar/ordenservicio/{id}', 'EquipoController@descargarOrden');
 
 Route::get('/calendario', 'EquipoController@calendario'); 
 
+Route::get('/glosario', 'EquipoController@glosario');
+
 
 
 
