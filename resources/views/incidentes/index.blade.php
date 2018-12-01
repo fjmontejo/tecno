@@ -92,6 +92,36 @@
              <br>
              <br>
              <br>
+             <div class="table-responsive">
+               <table class="table table-bordered">
+                 <thead>
+                   <tr class="bg-info">
+                     <th>ID equipo</th>
+                     <th>Nombre Equipo</th>
+                     <th>Número de Incidentes</th>
+                     <th>Estatus</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                  @forelse($inventario as $item)
+                  <tr>
+                  <td>{{$item->id}}</td>
+                  <td>{{$item->nombre}}</td>
+                    <td>{{$item->count}} </td>
+                    @if($item->count >= 2)
+                    <td class="bg-danger">Equipo en Riesgo</td>
+                    @else
+                    <td class="bg-success">Bajo Control</td>
+                    @endif
+                  </tr>
+                  @empty
+                  @endforelse
+                 </tbody>
+               </table>
+             </div>
+             <br>
+             <br>
+             <br>
                 <table class="table table-bordered">
                         <thead>
                           <tr>

@@ -21,9 +21,15 @@ class IncidenteController extends Controller
     {
         $incidentes = Incidente::all();
         
+        $inventario = DB::table('equipos')
+        ->leftJoin('incidentes', 'equipos.id', '=', 'incidentes.equipo_id')
+        ->selectRaw('equipos.*, count(incidentes.id) as count')
+        ->groupBy('equipos.id')
+        ->get();
 
         return view('incidentes.index')
-        ->with('incidentes', $incidentes);
+        ->with('incidentes', $incidentes)
+        ->with('inventario', $inventario);
     }
 
     public function create(Request $request, $id)
