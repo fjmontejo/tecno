@@ -186,7 +186,7 @@
                 <input type="date" name="fecha_incidente" class="form-control" placeholder="Introduce fecha del incidente">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Lugar del incidente</label>
+                <label for="exampleInputEmail1">Lugar del incidente Estado</label>
                 <input type="text" name="lugar_estado" class="form-control" placeholder="Introduce estado del incidente">
             </div>
             <div class="form-group col-md-4">
@@ -425,16 +425,16 @@
                 </span>
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Marca o denomonación distintiva</label>
+                <label for="exampleInputEmail1">Marca o denominación distintiva</label>
                 <input type="text" name="marcaodenom" class="form-control" placeholder="Introduce marca o denominación">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Denomonación genérica</label>
-                <input type="text" name="denominaciongene" class="form-control" placeholder="Introduce marca o denominación">
+                <label for="exampleInputEmail1">Denominación genérica</label>
+                <input type="text" name="denominaciongene" class="form-control" placeholder="Introduce denominación genérica">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">MODELO, PRESENTACIÓN, CÓDIGO O NÚMERO DE CATÁLOGO</label>
-                <input type="text" name="modelo_presentacion" class="form-control" placeholder="Introduce marca o denominación">
+                <input type="text" name="modelo_presentacion" class="form-control" placeholder="Introduce modelo...">
             </div>
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">NÚMERO DE SERIE O LOTE</label>

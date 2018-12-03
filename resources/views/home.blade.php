@@ -15,6 +15,9 @@
                     @endif
 
                     Estas conectado!
+                    Esta es una plataforma sobre tecnovigilancia que brindará la ayuda necesaria
+                    para la optimización de los procesos realizados en el departamento de ingenieria biomédica
+                    y registros de incidentes adversos.
                 </div>
             </div>
         </div>

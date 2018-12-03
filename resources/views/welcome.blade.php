@@ -97,7 +97,8 @@
           <p class="lead">
             <li> Manejo de invetario de equipos medicos
               <li> Mejor control de incidentes adversos
-                <li> Mejora eficiente del control de reportes
+              <li> Mejora eficiente del control de reportes
+              <li> Matriz de riesgo y alertas acerca del estatus de los equipos biomédicos  
           </p>
         </div>
       </div>
@@ -111,7 +112,7 @@
           <h2>Equipo de trabajo</h2>
           <p class="lead">Francisco Javier Montejo Hernández</p>
           <p class="lead">Edgar Giovanny Pérez Hernández</p>
-          <p class="lead">Aplicaciones de Telemedicina |8°A</p>
+          <p class="lead">Expediente Clínico Electrónico |9°A</p>
         </div>
       </div>
     </div>
